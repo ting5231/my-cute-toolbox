@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 88px;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    @apply bg-milk font-cute text-ink antialiased;
+    /* 淡淡的手帳點點 */
+    background-image:
+      radial-gradient(rgba(245, 184, 205, 0.32) 1.1px, transparent 1.3px),
+      radial-gradient(rgba(245, 184, 205, 0.18) 1.1px, transparent 1.3px);
+    background-size: 26px 26px, 26px 26px;
+    background-position: 0 0, 13px 13px;
+    min-height: 100vh;
+  }
+
+  ::selection {
+    background: #fce7ef;
+    color: #4f4147;
+  }
+
+  :focus-visible {
+    outline: 2.5px dashed #d989aa;
+    outline-offset: 3px;
+    border-radius: 12px;
+  }
+}
+
+@layer components {
+  /* 蕾絲波浪邊：放在元素底部 */
+  .lace-bottom {
+    position: relative;
+  }
+  .lace-bottom::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -9px;
+    height: 10px;
+    background:
+      radial-gradient(circle at 8px -1px, transparent 7px, #fff3f7 7.5px) 0 0 / 16px 10px repeat-x;
+    filter: drop-shadow(0 1px 0 #f4cad9);
+    pointer-events: none;
+  }
+
+  /* 紙膠帶 */
+  .washi {
+    position: absolute;
+    height: 22px;
+    width: 76px;
+    border-radius: 3px;
+    opacity: 0.85;
+    background-image: repeating-linear-gradient(
+      -45deg,
+      rgba(255, 255, 255, 0.55) 0 5px,
+      transparent 5px 10px
+    );
+    box-shadow: 0 1px 2px rgba(217, 137, 170, 0.18);
+    -webkit-mask: radial-gradient(circle at 0 50%, transparent 3px, #000 3.5px) left / 51% 100% no-repeat,
+      radial-gradient(circle at 100% 50%, transparent 3px, #000 3.5px) right / 51% 100% no-repeat;
+    mask: radial-gradient(circle at 0 50%, transparent 3px, #000 3.5px) left / 51% 100% no-repeat,
+      radial-gradient(circle at 100% 50%, transparent 3px, #000 3.5px) right / 51% 100% no-repeat;
+  }
+
+  /* 手帳車縫線 */
+  .stitch {
+    position: absolute;
+    inset: 10px;
+    border: 1.5px dashed #f4cad9;
+    border-radius: inherit;
+    pointer-events: none;
+  }
+
+  .chip-scroll {
+    scrollbar-width: none;
+  }
+  .chip-scroll::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

@@ -4,25 +4,16 @@
 // 欄位說明：
 //   id          唯一識別（收藏功能用，請勿重複、上線後不要隨意更改）
 //   name        中文名稱
-//   en          英文名稱（不顯示在卡片上，僅供搜尋）
+//   en          英文名稱（不顯示在卡片上）
 //   icon        卡片上的大型顏文字 / Emoji（點擊可複製）
-//   desc        一句介紹（不顯示在卡片上，僅供搜尋）
+//   desc        一句介紹（不顯示在卡片上）
 //   url         外部連結
 //   cta         按鈕文字
 //   tag         卡片左上角的分類小標籤
-//   categories  所屬分類（對應下方 categories 的 id，可多選）
-//   keywords    搜尋用關鍵字（中英文都可以）
+//   categories  所屬分類（kaomoji / emoji / symbols / fonts / tools，可多選）
+//   keywords    關鍵字（目前首頁沒有搜尋列，保留作為資料備註）
 //   tone        卡片底色：'pink' | 'cream' | 'lavender'
 //   deco        卡片右下角的小貼紙 Emoji（每張不同）
-
-export const categories = [
-  { id: 'all', label: 'All', mark: '✿' },
-  { id: 'kaomoji', label: 'Kaomoji', mark: '˶ᵔᵕᵔ˶' },
-  { id: 'emoji', label: 'Emoji', mark: '🎀' },
-  { id: 'symbols', label: 'Symbols', mark: '୨୧' },
-  { id: 'fonts', label: 'Fonts', mark: '𝒜' },
-  { id: 'tools', label: 'Tools', mark: '✂︎' },
-]
 
 export const tools = [
   {

@@ -28,14 +28,13 @@ src/
   components/
     Header.jsx          頂部導覽（手機版漢堡選單）
     Hero.jsx            首頁主視覺 + 漂浮裝飾
-    SearchBar.jsx       搜尋列
-    CategoryFilter.jsx  分類 Chip + My Favorites 切換
+    FavoritesToggle.jsx My Favorites 切換按鈕
     ToolCard.jsx        工具卡片（收藏、點擊複製顏文字）
     CutePick.jsx        Today's Cute Pick 隨機符號
     About.jsx           關於 / 使用小提示
     Toast.jsx           Copied ♡ 提示
     Footer.jsx
-  data/tools.js         ★ 工具、分類、隨機符號資料都在這裡
+  data/tools.js         ★ 工具與隨機符號資料都在這裡
   hooks/useFavorites.js 收藏（localStorage）
   utils/clipboard.js    複製到剪貼簿（含舊瀏覽器 fallback）
   App.jsx
@@ -57,7 +56,7 @@ tailwind.config.js      色票、字體、動畫
   url: 'https://example.com',
   cta: '前往 ♡',
   tag: 'Symbols',
-  categories: ['symbols'],    // all 以外的分類 id，可多選
+  categories: ['symbols'],    // kaomoji / emoji / symbols / fonts / tools
   keywords: ['關鍵字', 'keyword'],
   tone: 'pink',               // pink | cream | lavender
   deco: '✦',
@@ -66,7 +65,7 @@ tailwind.config.js      色票、字體、動畫
 
 ## 功能
 
-- 搜尋 + 分類 + 收藏可以同時篩選；分類 Chip 上的數字會跟著搜尋結果變化
+- My Favorites ♡ 可切換只看收藏的工具
 - 收藏存在 `localStorage`（key：`cute-toolbox:favorites`），網址 `#favorites` 可直接開啟收藏
 - 點卡片上的大顏文字可直接複製
 - 所有外部連結皆為 `target="_blank" rel="noopener noreferrer"`

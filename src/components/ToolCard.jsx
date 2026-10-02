@@ -68,7 +68,7 @@ export default function ToolCard({ tool, index = 0, isFavorite, onToggleFavorite
               isFavorite ? 'text-sakura-500' : 'text-sakura-400'
             } ${popKey ? 'animate-pop' : ''}`}
           >
-            {isFavorite ? '♥' : '♡'}
+            {isFavorite ? '💖' : '♡'}
           </span>
           {popKey > 0 && isFavorite && (
             <span

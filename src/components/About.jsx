@@ -1,7 +1,6 @@
 const TIPS = [
   { mark: '♡', text: '點卡片右上角的 ♡ 就能收藏，收藏會保存在這台裝置的瀏覽器裡。' },
   { mark: '✂︎', text: '點卡片中間的大顏文字，可以直接複製貼上。' },
-  { mark: '⌕', text: '搜尋和分類可以一起用，例如選 Emoji 再搜尋「熊」。' },
 ]
 
 export default function About() {
